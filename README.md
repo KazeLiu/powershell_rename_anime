@@ -1,0 +1,2 @@
+# powershell_rename_anime
+重命名动漫以适应刮削器的命名规则
