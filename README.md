@@ -30,14 +30,15 @@ Watashi no Yuri wa Oshigoto desu!;百合是我的工作！;02
 ```
 
 请注意，这个匹配是贪婪匹配，配置文件请注意名称顺序，必须让短文件名在长文件下面，不然会被短文件名给匹配掉。
-比如向山进发，如果Yama no Susume放在Yama no Susume Second Season上面，那么Yama no Susume Second Season就会应为匹配到了Yama no Susume而被归类到第一季。
+比如向山进发，如果`Yama no Susume`放在`Yama no Susume Second Season`上面，那么`Yama no Susume Second Season`就会因为匹配到了`Yama no Susume`而被归类到第一季。
 应当按以下顺序写入配置
+
 ```
-Next Summit;向山进发;04;
 Yama no Susume Second Season;向山进发;02;
 Yama no Susume Third Season;向山进发;03;
 Yama no Susume Omoide Present;向山进发;00;
 Yama no Susume;向山进发;
+Next Summit;向山进发;04;
 ```
 
 ### 修改代码中的路径
@@ -66,6 +67,6 @@ $mediapath = "D:\result" # 媒体库位置，新的文件夹会在此目录下�
 ## 注意事项
 
 - 此工具为面向ChatGPT编程，只测试了代码注释中使用的文件名。在openwrt上的linux版本，日常我自己使用三个月没出过问题。
-- 这个readme也是ChatGPT生成的，如果没看懂可以和我说我添加使用方法
+- 这个readme也是ChatGPT生成的，我只修改了一小部分，如果没看懂可以和我说我添加使用方法
 - 此工具目前仅处理文件，不处理目录。对于深层目录结构的种子文件，此脚本将直接跳过。
 - 该工具需要能在文件名中识别到集数，也就是说，文件名中必须包含数字以表示集数，否则无法处理。
