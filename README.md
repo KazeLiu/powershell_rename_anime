@@ -29,6 +29,17 @@ Watashi no Yuri wa Oshigoto desu!;百合是我的工作！;
 Watashi no Yuri wa Oshigoto desu!;百合是我的工作！;02
 ```
 
+请注意，这个匹配是贪婪匹配，配置文件请注意名称顺序，必须让短文件名在长文件下面，不然会被短文件名给匹配掉。
+比如向山进发，如果Yama no Susume放在Yama no Susume Second Season上面，那么Yama no Susume Second Season就会应为匹配到了Yama no Susume而被归类到第一季。
+应当按以下顺序写入配置
+```
+Next Summit;向山进发;04;
+Yama no Susume Second Season;向山进发;02;
+Yama no Susume Third Season;向山进发;03;
+Yama no Susume Omoide Present;向山进发;00;
+Yama no Susume;向山进发;
+```
+
 ### 修改代码中的路径
 
 在运行脚本前，你需要修改代码中的 `$configpath` 和 `$mediapath`。其中，`$configpath` 是 `console.txt` 和 `rename.txt` 所在的文件夹路径，`$mediapath` 是你希望媒体文件被归类存储的位置。新建的目录会在这个文件夹下生成。
